@@ -1,6 +1,6 @@
 # ssstore
 
-> web front end for SSStore using Vue
+> web front end for SSStore built on Vue
 
 ## Build Setup
 
