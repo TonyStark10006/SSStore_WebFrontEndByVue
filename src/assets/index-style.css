@@ -42,7 +42,7 @@ body {
 }
 /* start header */
 .header_bg{
-	background: #111111;
+	background: #9392e7; /* #111111 */
 }
 .logo{
 	float:left;
@@ -69,7 +69,8 @@ body {
 }
 .cssmenu > ul > li > a {
 	font-family: 'Merriweather Sans', sans-serif;
-	color: #999999;
+	/*color: #999999;*/
+	color: #E6E6FA;
 	display: block;
 	font-size: 16px;
 	line-height: 1.5em;
@@ -204,7 +205,7 @@ p.para{
 }
 .left_arrow{
 	cursor:pointer;
-	background: #000000 url('../../static/images/index/left_arrow.png') no-repeat 5px 5px;
+	background: #7B68EE url('../../static/images/index/left_arrow.png') no-repeat 5px 5px;
 	width: 24px;
 	height: 24px;
 	padding: 5px;
@@ -215,7 +216,7 @@ p.para{
 }
 .right_arrow{
 	cursor:pointer;
-	background: #000000 url('../../static/images/index/right_arrow.png') no-repeat 5px 5px;
+	background: #7B68EE url('../../static/images/index/right_arrow.png') no-repeat 5px 5px;
 	width: 24px;
 	height: 24px;
 	padding: 5px;
@@ -286,17 +287,18 @@ p.para{
 	-o-border-radius: 30px;
 }
 .foot_soc ul li a.icon1{
-	background: #000000 url('../../static/images/index/icon1.png') no-repeat 12px 12px;
+	background: #9392e7 url('../../static/images/index/icon1.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon2{
-	background: #000000 url('../../static/images/index/icon2.png') no-repeat 12px 12px;
+	background: #9392e7 url('../../static/images/index/icon2.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon3{
-	background: #000000 url('../../static/images/index/icon3.png') no-repeat 12px 12px;
+	background: #9392e7 url('../../static/images/index/icon3.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon4{
-	background: #000000 url('../../static/images/index/icon4.png') no-repeat 12px 12px;
+	background: #9392e7 url('../../static/images/index/icon4.png') no-repeat 12px 12px;
 }
+/*#000000*/
 .foot_soc ul li a:hover{
 	zoom: 1;
     filter: alpha(opacity=50);
