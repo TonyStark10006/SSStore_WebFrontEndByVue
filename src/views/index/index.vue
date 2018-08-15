@@ -1,44 +1,6 @@
 <template>
     <div>
-    <!-- start header -->
-    <div class="header_bg">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="header">
-                    <div class="logo">
-                        <a href="index.html"><img src="static/images/logo.png" alt=""/> </a>
-                    </div>
-                    <div class="cssmenu">
-                        <ul>
-                            <li ><a class="home" href="index.html"></a></li>
-                            <li class="active"><a href="about.html">About</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="inspiration.html">Inspiration</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- start sub-header -->
-    <div class="header_sub_bg">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="hdr-nav">
-                    <ul class="sub_nav">
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Mobile</a></li>
-                        <li class="hide"><a href="#">Social Media</a></li>
-                        <li class="active"><a href="#">Technology</a></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
+    <Header></Header>
     <!-- start main -->
     <div class="wrap">
         <div class="wrapper">
@@ -47,7 +9,7 @@
                     <h2 class="style list"><a href="#">Our favourite Task Management App! </a></h2>
                     <h3 class="style">posted on march 28, 2013</h3>
                     <div class="list_img">
-                        <img src="static/images/pic1.jpg" alt="" align=""/>
+                        <img src="static/images/index/pic1.jpg" alt="" align=""/>
                     </div>
                     <p class="para"> All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                     <a href="blog.html" class="btn">Read More</a>
@@ -56,7 +18,7 @@
                     <h2 class="style list"><a href="#">Year in review: Our favourites Apps from 2012</a></h2>
                     <h3 class="style">posted on march 3, 2013</h3>
                     <div class="list_img">
-                        <img src="static/images/pic2.jpg" alt="" align=""/>
+                        <img src="static/images/index/pic2.jpg" alt="" align=""/>
                     </div>
                     <p class="para"> All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                     <a href="blog.html" class="btn">Read More</a>
@@ -65,7 +27,7 @@
                     <h2 class="style list"><a href="#">marketing tips & tricks from the top brands</a></h2>
                     <h3 class="style">posted on December 2, 2013</h3>
                     <div class="list_img">
-                        <img src="static/images/pic3.jpg" alt="" align=""/>
+                        <img src="static/images/index/pic3.jpg" alt="" align=""/>
                     </div>
                     <p class="para"> All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                     <a href="blog.html" class="btn">Read More</a>
@@ -87,43 +49,28 @@
         </div>
         <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
     </div>
-    <!-- start footer -->
-    <div class="wrap">
-        <div class="footer">
-            <div class="foot_nav">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-            <div class="foot_soc">
-                <ul>
-                    <li><a class="icon1" href="#"></a></li>
-                    <li><a  class="icon2" href="#"></a></li>
-                    <li><a  class="icon3" href="#"></a></li>
-                    <li><a  class="icon4" href="#"></a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-            <div class="copy">
-                <p class="w3-link">Copyright &copy; 2014.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+        <Footer></Footer>
     </div>
 
 </template>
 
 <script>
+import Header from './components/header-bar.vue'
+import Footer from './components/footer-bar.vue'
+import $ from 'jquery'
+
 export default {
-  name: 'index'
+  name: 'index',
+  components: {
+    Header: Header,
+    Footer: Footer
+  },
+  created () {
+    console.log($)
+  }
 }
 </script>
 
-<style scoped>
-@import "../../assets/style.css";
+<style>
+@import "../../assets/index-style.css";
 </style>

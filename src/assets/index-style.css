@@ -56,10 +56,10 @@ body {
 	position: relative;
 }
 .cssmenu > ul > li a.home{
-	background: url('../../static/images/home.png') no-repeat;
+	background: url('../../static/images/index/home.png') no-repeat;
 }
 .cssmenu > ul > li a.home:hover{
-	background: url('../../static/images/home_h.png') no-repeat;
+	background: url('../../static/images/index/home_h.png') no-repeat;
 }
 .cssmenu > ul > li.active a{
 	color:#ffffff;
@@ -179,7 +179,7 @@ p.para{
 	transition: all 0.3s ease-out;
 }
 .btn:before{
-	content:url('../../static/images/btn.png');
+	content:url('../../static/images/index/btn.png');
 	float:left;
 }
 .btn:hover{
@@ -204,7 +204,7 @@ p.para{
 }
 .left_arrow{
 	cursor:pointer;
-	background: #000000 url('../../static/images/left_arrow.png') no-repeat 5px 5px;
+	background: #000000 url('../../static/images/index/left_arrow.png') no-repeat 5px 5px;
 	width: 24px;
 	height: 24px;
 	padding: 5px;
@@ -215,7 +215,7 @@ p.para{
 }
 .right_arrow{
 	cursor:pointer;
-	background: #000000 url('../../static/images/right_arrow.png') no-repeat 5px 5px;
+	background: #000000 url('../../static/images/index/right_arrow.png') no-repeat 5px 5px;
 	width: 24px;
 	height: 24px;
 	padding: 5px;
@@ -286,16 +286,16 @@ p.para{
 	-o-border-radius: 30px;
 }
 .foot_soc ul li a.icon1{
-	background: #000000 url('../../static/images/icon1.png') no-repeat 12px 12px;
+	background: #000000 url('../../static/images/index/icon1.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon2{
-	background: #000000 url('../../static/images/icon2.png') no-repeat 12px 12px;
+	background: #000000 url('../../static/images/index/icon2.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon3{
-	background: #000000 url('../../static/images/icon3.png') no-repeat 12px 12px;
+	background: #000000 url('../../static/images/index/icon3.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a.icon4{
-	background: #000000 url('../../static/images/icon4.png') no-repeat 12px 12px;
+	background: #000000 url('../../static/images/index/icon4.png') no-repeat 12px 12px;
 }
 .foot_soc ul li a:hover{
 	zoom: 1;
@@ -431,22 +431,22 @@ h4.style1 a:hover{
 	position: absolute;
 	width: 12px;
 	height: 12px;
-	background: url('../../static/images/arrow.png');
+	background: url('../../static/images/index/arrow.png');
 	top: 6px;
 	left: -8px;
 }
 .article ul li.twitter{
-	background-image: url('../../static/images/twitter.png') ;
+	background-image: url('../../static/images/index/twitter.png') ;
 	background-repeat: no-repeat;
 	background-position:0px 0px;
 }
 .article ul li.facebook{
-	background-image: url('../../static/images/facebook.png') ;
+	background-image: url('../../static/images/index/facebook.png') ;
 	background-repeat: no-repeat;
 	background-position:0px 0px;
 }
 .article ul li.pinterest{
-	background-image: url('../../static/images/pinterest.png') ;
+	background-image: url('../../static/images/index/pinterest.png') ;
 	background-repeat: no-repeat;
 	background-position:0px 0px;
 }
@@ -493,7 +493,7 @@ h4.style1 a:hover{
 	padding: 10px 0;
 }
 .btn1:before{
-	content:url('../../static/images/reply.png');
+	content:url('../../static/images/index/reply.png');
 	float:left;
 }
 .btn1:hover{
