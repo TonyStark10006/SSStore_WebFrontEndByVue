@@ -16,6 +16,7 @@
                                 <li><a href="inspiration.html">Inspiration</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                                 <li><router-link to="/login">Login</router-link></li>
+                                <li><router-link to="/panel">Panel</router-link></li>
                                 <div class="clear"></div>
                             </ul>
                         </div>
@@ -30,10 +31,10 @@
                 <div class="wrapper">
                     <div class="hdr-nav">
                         <ul class="sub_nav">
-                            <li><a href="#">Business</a></li>
+                            <li class="active"><a href="#">Business</a></li>
                             <li><a href="#">Mobile</a></li>
                             <li class="hide"><a href="#">Social Media</a></li>
-                            <li class="active"><a href="#">Technology</a></li>
+                            <li><a href="#">Technology</a></li>
                         </ul>
                     </div>
                     <div class="clear"></div>
