@@ -140,6 +140,7 @@ export default {
 </script>
 
 <style scoped>
+@import "../../../static/css/reset.css";
 @import "../../assets/index-style.css";
 * {
     box-sizing: unset;

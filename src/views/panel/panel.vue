@@ -1,40 +1,46 @@
 <template>
-    <Timeline>
-        <TimelineItem>
-            <p class="time">1976年</p>
-            <p class="content">Apple I 问世</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">1984年</p>
-            <p class="content">发布 Macintosh</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2007年</p>
-            <p class="content">发布 iPhone</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2010年</p>
-            <p class="content">发布 iPad</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2011年10月5日</p>
-            <p class="content">史蒂夫·乔布斯去世</p>
-        </TimelineItem>
-    </Timeline>
+<div>
+    <!--<div class="title">-->
+        <!--<h1>欢迎来到SSStore</h1>-->
+    <!--</div>-->
+    <HeaderBar class="layout-header"></HeaderBar>
+    <SideMenu class="layout-side-menu"></SideMenu>
+</div>
 </template>
 
 <script>
+import SideMenu from './components/side-menu.vue'
+import HeaderBar from './components/header-bar.vue'
+
 export default {
-  name: 'panel'
+  name: 'panel',
+  components: {
+    SideMenu: SideMenu,
+    HeaderBar: HeaderBar
+  }
 }
 </script>
 
 <style scoped>
-.time{
-    font-size: 14px;
-    font-weight: bold;
+.layout-header, .layout-side-menu {
+    font-size: 20px;
 }
-.content{
-    padding-left: 5px;
+
+/*.title {*/
+    /*width: 10%;*/
+    /*float: left;*/
+/*}*/
+
+.layout-header {
+    height: 100%;
+    width: 100%;
+    float: left;
 }
+
+.layout-side-menu {
+    height: 100%;
+    float: left;
+    width: 100%;
+}
+
 </style>
