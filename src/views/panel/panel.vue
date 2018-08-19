@@ -21,7 +21,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+@import "../../../static/css/iview.css";
 .layout-header, .layout-side-menu {
     font-size: 20px;
 }

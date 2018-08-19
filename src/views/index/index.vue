@@ -1,47 +1,7 @@
 <template>
     <div>
-    <!--<Header></Header>-->
+    <Header></Header>
     <!-- start header -->
-    <div class="header_bg">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="header">
-                    <div class="logo">
-                        <a href="index.html"><img src="static/images/index/logo.png" alt=""/> </a>
-                    </div>
-                    <div class="cssmenu">
-                        <ul>
-                            <li ><a class="home" href="index.html"></a></li>
-                            <li class="active"><a href="about.html">About</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="inspiration.html">Inspiration</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><router-link to="/login">Login</router-link></li>
-                            <li><router-link to="/panel">Panel</router-link></li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- start sub-header -->
-    <div class="header_sub_bg">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="hdr-nav">
-                    <ul class="sub_nav">
-                        <li class="active"><a href="#">Business</a></li>
-                        <li><a href="#">Mobile</a></li>
-                        <li class="hide"><a href="#">Social Media</a></li>
-                        <li><a href="#">Technology</a></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
     <!-- start main -->
     <div class="wrap">
         <div class="wrapper">
@@ -90,57 +50,31 @@
         </div>
     </div>
     <!-- start footer -->
-    <div class="wrap">
-        <div class="footer">
-            <div class="foot_nav">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-            <div class="foot_soc">
-                <ul>
-                    <li><a class="icon1" href="#"></a></li>
-                    <li><a  class="icon2" href="#"></a></li>
-                    <li><a  class="icon3" href="#"></a></li>
-                    <li><a  class="icon4" href="#"></a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-            <div class="copy">
-                <p class="w3-link">Copyright &copy; 2014.Company name All rights reserved.</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-        <!--<Footer></Footer>-->
-        <!--<router-view name="a"></router-view>-->
+        <Footer></Footer>
+        <router-view name="a"></router-view>
     </div>
 
 </template>
 
 <script>
-// import Header from './components/header-bar.vue'
-// import Footer from './components/footer-bar.vue'
+import Header from './components/header-bar.vue'
+import Footer from './components/footer-bar.vue'
 import $ from 'jquery'
 
 export default {
   name: 'index',
-  // components: {
-  //   Header: Header,
-  //   Footer: Footer
-  // },
+  components: {
+    Header: Header,
+    Footer: Footer
+  },
   created () {
     console.log($)
   }
 }
 </script>
 
-<style scoped>
-@import "../../../static/css/reset.css";
+<style>
+/*@import "../../../static/css/reset.css";*/
 @import "../../assets/index-style.css";
 * {
     box-sizing: unset;
