@@ -26,13 +26,19 @@
         </div>
         <!--start-copyright-->
         <div class="copy-right">
-            <p>Copyright &copy; 2015  All rights  Reserved</p>
+            <p>Copyright &copy; 2018  All rights Reserved.</p>
         </div>
         <!--//end-copyright-->
     </div>
 </template>
 
 <script>
+import axios from 'axios'
+axios.get('/verify-login').then(function (response) {
+  console.log(response)
+}).catch(function (error) {
+  console.log(error)
+})
 export default {
   name: 'login'
 }

@@ -6,7 +6,7 @@ import Index from '@/views/index/index'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -33,3 +33,12 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log('这里是前置路由')
+  next({
+    name: Index
+  })
+})
+
+export default router
