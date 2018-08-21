@@ -34,13 +34,42 @@
 
 <script>
 import axios from 'axios'
-axios.get('/verify-login').then(function (response) {
-  console.log(response)
-}).catch(function (error) {
-  console.log(error)
-})
+
 export default {
-  name: 'login'
+  name: 'login',
+  beforeCreate: function () {
+    console.log('创建之前')
+  },
+  created: function () {
+    console.log('创建之后')
+    axios({
+      method: 'get',
+      baseURL: '/api',
+      url: 'getWeatherMsg?city=北京'
+    }).then(function (response) {
+      console.log(response)
+    }).catch(function (error) {
+      console.log(error)
+    })
+  },
+  beforeMount: function () {
+    console.log('挂载之前')
+  },
+  mounted: function () {
+    console.log('挂载之后')
+  },
+  beforeUpdate: function () {
+    console.log('更新之前')
+  },
+  updated: function () {
+    console.log('更新之后')
+  },
+  beforeDestroy: function () {
+    console.log('销毁之前')
+  },
+  destroyed: function () {
+    console.log('销毁之后')
+  }
 }
 </script>
 
