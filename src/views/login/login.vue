@@ -15,7 +15,10 @@
                     </li>
                     <div class="clear"></div>
 
-                    <div class="submit"><input type="submit" onclick="myFunction()" value="Sign in" ></div>
+                    <div class="submit">
+                        <input type="submit" onclick="myFunction()" value="Sign in" >
+                        <button>token: {{ getCookie11('token') }}</button>
+                    </div>
                     <div class="clear"></div>
                     <p><router-link to="/reset-password">Forgot Password ?</router-link></p>
                 </ul>
@@ -34,6 +37,7 @@
 
 <script>
 import axios from 'axios'
+import { loginUrl } from '../../libs/config.js'
 
 export default {
   name: 'login',
@@ -42,15 +46,20 @@ export default {
   },
   created: function () {
     console.log('创建之后')
-    axios({
-      method: 'get',
-      baseURL: '/api',
-      url: 'getWeatherMsg?city=北京'
-    }).then(function (response) {
-      console.log(response)
-    }).catch(function (error) {
-      console.log(error)
-    })
+    if (this.getCookie11('token') !== '') {
+      console.log(this.getCookie11('token'))
+    } else {
+      axios({
+        method: 'get',
+        baseURL: '/api',
+        url: loginUrl
+      }).then(function (response) {
+        console.log(response)
+        document.cookie = 'token=' + response.data.token
+      }).catch(function (error) {
+        console.log(error)
+      })
+    }
   },
   beforeMount: function () {
     console.log('挂载之前')
@@ -69,6 +78,17 @@ export default {
   },
   destroyed: function () {
     console.log('销毁之后')
+  },
+  methods: {
+    getCookie11 (cname) {
+      let name = cname + '='
+      let ca = document.cookie.split(';')
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim()
+        if (c.indexOf(name) === 0) return c.substring(name.length, c.length)
+      }
+      return ''
+    }
   }
 }
 </script>
