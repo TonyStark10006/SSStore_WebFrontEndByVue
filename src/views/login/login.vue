@@ -17,7 +17,6 @@
 
                     <div class="submit">
                         <input type="submit" onclick="myFunction()" value="Sign in" >
-                        <button>token: {{ getCookie11('token') }}</button>
                     </div>
                     <div class="clear"></div>
                     <p><router-link to="/reset-password">Forgot Password ?</router-link></p>
@@ -38,6 +37,7 @@
 <script>
 import axios from 'axios'
 import { loginUrl } from '../../libs/config.js'
+import { getCookieValue } from '../../libs/tools.js'
 
 export default {
   name: 'login',
@@ -46,8 +46,8 @@ export default {
   },
   created: function () {
     console.log('创建之后')
-    if (this.getCookie11('token') !== '') {
-      console.log(this.getCookie11('token'))
+    if (getCookieValue('token') !== '') {
+      console.log('token值：' + getCookieValue('token'))
     } else {
       axios({
         method: 'get',
@@ -78,17 +78,6 @@ export default {
   },
   destroyed: function () {
     console.log('销毁之后')
-  },
-  methods: {
-    getCookie11 (cname) {
-      let name = cname + '='
-      let ca = document.cookie.split(';')
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim()
-        if (c.indexOf(name) === 0) return c.substring(name.length, c.length)
-      }
-      return ''
-    }
   }
 }
 </script>
