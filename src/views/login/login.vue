@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { axios } from '../../libs/axios.js'
 import { loginUrl } from '../../libs/config.js'
 import { getCookieValue } from '../../libs/tools.js'
 
@@ -49,13 +49,9 @@ export default {
     if (getCookieValue('token') !== '') {
       console.log('token值：' + getCookieValue('token'))
     } else {
-      axios({
-        method: 'get',
-        baseURL: '/api',
-        url: loginUrl
-      }).then(function (response) {
+      axios('get', loginUrl, '/api').then(function (response) {
         console.log(response)
-        document.cookie = 'token=' + response.data.token
+        document.cookie = 'token=' + response.data.token + ''
       }).catch(function (error) {
         console.log(error)
       })
