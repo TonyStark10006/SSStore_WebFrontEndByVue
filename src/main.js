@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '../static/css/reset.css'
+// import '../static/css/reset.css'
 import iView from 'iview'
-// import 'iview/dist/styles/iview.css'
+import 'iview/dist/styles/iview.css'
+// import '../theme/custom.less'
 
 Vue.config.productionTip = false
 Vue.use(iView)
@@ -14,6 +15,7 @@ Vue.use(iView)
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  // components: { App },
+  // template: '<App/>',
+  render: h => h(App)
 })
