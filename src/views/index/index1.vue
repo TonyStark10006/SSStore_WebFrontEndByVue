@@ -17,9 +17,9 @@
   left: 20px;
 }
 .layout-nav {
-  width: 420px;
+  width: 620px;
   margin: 0 auto;
-  margin-right: 40%;
+  /* margin-right: 40%; */
 }
 .layout-footer-center {
   text-align: center;
@@ -29,24 +29,24 @@
     <div class="layout">
         <Layout>
             <Header :style="{position: 'fixed', width: '100%'}">
-                <Menu mode="horizontal" theme="dark" active-name="1">
+                <Menu mode="horizontal" theme="light" active-name="1">
                     <div class="layout-logo"></div>
                     <div class="layout-nav">
                         <MenuItem name="1">
-                            <Icon type="ios-navigate"></Icon>
-                            Item 1
+                            <Icon type="md-home"></Icon>
+                            功能介绍
                         </MenuItem>
                         <MenuItem name="2">
-                            <Icon type="ios-keypad"></Icon>
-                            Item 2
+                            <Icon type="md-git-network"></Icon>
+                            路由介绍
                         </MenuItem>
                         <MenuItem name="3">
-                            <Icon type="ios-analytics"></Icon>
-                            Item 3
+                            <Icon type="md-person"></Icon>
+                            <router-link to="/panel">会员中心</router-link>
                         </MenuItem>
                         <MenuItem name="4">
-                            <Icon type="ios-paper"></Icon>
-                            Item 4
+                            <Icon type="md-settings"></Icon>
+                            <router-link to="/panel" target="_blank">控制面板</router-link>
                         </MenuItem>
                     </div>
                 </Menu>
