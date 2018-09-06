@@ -59,7 +59,6 @@
 <script>
 import Header from './components/header-bar.vue'
 import Footer from './components/footer-bar.vue'
-import $ from 'jquery'
 
 export default {
   name: 'index',
@@ -68,7 +67,7 @@ export default {
     Footer: Footer
   },
   created () {
-    console.log($)
+
   }
 }
 </script>

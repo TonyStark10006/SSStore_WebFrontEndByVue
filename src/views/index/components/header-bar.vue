@@ -13,8 +13,6 @@
                                 <li ><a class="home" href="index.html"></a></li>
                                 <li class="active"><a href="about.html">About</a></li>
                                 <li><a href="blog.html">Blog</a></li>
-                                <li><a href="inspiration.html">Inspiration</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
                                 <li><router-link to="/login">Login</router-link></li>
                                 <li><router-link to="/panel" target="_blank">Panel</router-link></li>
                                 <div class="clear"></div>
